@@ -46,7 +46,7 @@ Feature: Issue #384 -- Active Tags fail with ScenarioOutline
         default_format = pretty
         show_timings = no
         show_skipped = no
-        color = no
+        color = never
         """
       And a file named "features/outline.active_tags.feature" with:
         """

@@ -78,11 +78,13 @@ options = [
           help="Disable the use of ANSI color escapes.")),
 
     (("--color",),
-     dict(action="store", dest="color", nargs='?', type=TermColor.from_str,
-          const=TermColor.auto,
-          help="""Use ANSI color escapes. This is the default
-                  behaviour. This switch is used to override a
-                  configuration file setting.""")),
+     dict(action='store', dest="color", const='auto', default='auto', nargs="?",
+          type=TermColor.from_str,
+          choices=[TermColor.always, TermColor.never, TermColor.auto],
+          metavar='WHEN',
+          help="""Use ANSI color escapes. Default is auto. This switch is used
+                  to override a configuration file setting.
+                  WHEN is never, always, or auto.""")),
 
     (("-d", "--dry-run"),
      dict(action="store_true",

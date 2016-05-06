@@ -608,7 +608,7 @@ class Configuration(object):
             #  * stop at the first failure.
             self.default_format = "plain"
             self.tags = ["wip"] + self.default_tags.split()
-            self.color = False
+            self.color = TermColor.never
             self.stop = True
             self.log_capture = False
             self.stdout_capture = False

@@ -108,7 +108,7 @@ Feature: Issue #216: ANSI escape sequences are used while using --wip option
 
 
   Scenario: When using --wip and --color, coloring is disabled
-    When I run "behave --wip -f pretty --color features"
+    When I run "behave --wip -f pretty --color -- features"
     Then it should fail with:
       """
       0 features passed, 1 failed, 0 skipped

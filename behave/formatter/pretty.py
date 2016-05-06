@@ -13,6 +13,8 @@ from six.moves import zip
 
 
 class TermColor(Enum):
+    # TODO(Aistis): add 'yes' and 'no' to support old behave.ini files
+
     never = 0
     always = 1
     auto = 2

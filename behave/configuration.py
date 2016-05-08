@@ -393,7 +393,7 @@ def read_configuration(path):
         if not config.has_option("behave", dest):
             continue
         action = keywords.get("action", "store")
-        if action == "store":
+        if action in ("store", "store_const"):
             use_raw_value = dest in raw_value_options
             result[dest] = config.get("behave", dest, raw=use_raw_value)
         elif action in ("store_true", "store_false"):

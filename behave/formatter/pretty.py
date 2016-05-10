@@ -19,6 +19,10 @@ class TermColor(Enum):
     always = 1
     auto = 2
 
+    # added for backwords compatibility with behave.ini collor option
+    no = never
+    yes = auto
+
     @staticmethod
     def from_str(name):
         try:
